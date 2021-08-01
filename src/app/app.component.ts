@@ -10,9 +10,10 @@ import xml2js from 'xml2js';
 export class AppComponent {  
   title = 'read-xml-angular';  
   public xmlItems: any;  
+  str = 'http://localhost:4200/api/cidade/' + 246 + '/previsao.xml';
   constructor(private _http: HttpClient) { this.loadXML(); }  
   loadXML() {  
-    this._http.get('http://localhost:4200/api/cidade/246/previsao.xml',  
+    this._http.get(this.str,  
       {  
         responseType: 'blob'  
       })  
