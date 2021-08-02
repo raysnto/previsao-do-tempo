@@ -14,7 +14,7 @@ export class WidgetCapitalComponent implements OnInit {
   @Input() capital_id: string;
   public xmlItems: any;
 
-  constructor(private _http: HttpClient) { this.loadXML(); }  
+  constructor(private _http: HttpClient) {  }  
 
   loadXML() {
     let str = 'http://localhost:4200/api/cidade/' + this.capital_id + '/previsao.xml';  
@@ -62,7 +62,7 @@ export class WidgetCapitalComponent implements OnInit {
   }  
 
   ngOnInit(): void {
-
+    this.loadXML();
   }
 
 }
