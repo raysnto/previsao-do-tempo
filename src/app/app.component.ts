@@ -1,14 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import xml2js from 'xml2js';
+import { WidgetCapitalComponent } from './widget-capital/widget-capital.component';
 
 @Component({  
   selector: 'app-root',  
   templateUrl: './app.component.html',  
   styleUrls: ['./app.component.css']  
 })  
-export class AppComponent {  
-  title = 'read-xml-angular';  
+export class AppComponent {
+  title = 'envia-capitais';  
+  //public xmlItems = WidgetCapitalComponent.xmlItems;
+  /*public ids = [222, 241, 244, 246]; //BH, RJ, SP, VIX
   public xmlItems: any;  
   str = 'http://localhost:4200/api/cidade/' + 246 + '/previsao.xml';
   constructor(private _http: HttpClient) { this.loadXML(); }  
@@ -54,5 +57,5 @@ export class AppComponent {
         resolve(arr);
       });  
     });
-  }   
+  }*/   
 } 
